@@ -1,5 +1,5 @@
 # SAAS Starter Project 
-Simple HTML and CSS SAAS project. 
+HTML and CSS Responsive webpage
 
 1. You are going to build your very own SaaS (Software as a service). New companies always need someone to build their website and here is your chance to do just that. This will be a major portfolio piece for you.
 
