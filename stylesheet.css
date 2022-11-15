@@ -3,14 +3,13 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%
 }
 .container-wrapper{
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-}
-.background-color{
-
+  flex-wrap: wrap;
 }
 .background-color::after{
   content: '';
@@ -28,83 +27,44 @@ body{
   transform: skew(-69deg);
   z-index: -1;
 }
-.main-top-drty{
-  display: flex;
-  /*border: blue solid;*/
-}
 a{
   color:#a1a9b1;
-}
-.main-top-drty i{
-  padding-right: 5px;
-  padding-left: 5px;
-  color: #a1a9b1;
-}
-.main-demo{
-  text-decoration: none;
-  /*padding-left:100px;*/
-  /*border: red dotted;*/
-  color: #a1a9b1;
-  font-size: small;
-  position: relative;
-  left: 16px;
-}
-.main-demo i{
-  font-size: x-small;
-}
-
-.demos{
-  /*border: solid green;*/
-  margin-left: auto;
-  color: #a1a9b1;
-  margin-right: 45px;
-  font-size: small;
-  position: relative;
-  left: -19px;
-}
-.demos i{
-  font-size: x-small;
 }
 .docs i {
   font-size: x-small;
 }
 .docs{
   align-content: right;
-  /*border: solid orange;*/
-  /*padding-right: 106px;*/
   font-size: small;
   position: relative;
   right: 25px;
 }
 .logo-links{
   display: flex;
-  position: relative;
-  max-width: 100%;
-  top: 25px;
-  /*border: solid red;*/
-  height: 50px;
+  align-items: center;
+  height: 100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .company-image{
-  height: 120px;
   width: 120px;
-  /*border: solid red;*/
   position: relative;
-  /*left: 115px;*/
 }
-.top-nav-list{
-  align-self: center;
-  margin-left: auto;
-  /*padding-right: 133px;*/
+.alignment-right{
+  display: flex;
+  align-items: center;
+
 }
 .top-nav-list ul{
   display: flex;
   padding-right: 10px;
   padding-left: 10px;
   justify-content: space-between;
-  font-weight: 500;
+  font-weight: 700;
   position: relative;
-  right: 28px;
-
+  width: 450px;
+  align-items: center;
+  margin-right: 30px;
 }
 .top-nav-list ul li{
   padding-right: 10px;
@@ -119,7 +79,7 @@ top-nav-list ul li a{
 }
 .buy-now button{
   height: 50px;
-  width: 90px;
+  width: 110px;
   align-self: center;
   background-color:  #387dff;
   border-radius: 23px;
@@ -127,7 +87,8 @@ top-nav-list ul li a{
   right: 28px;
   color: white;
   border: none;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 15px;
 }
 button a {
   color: white;
@@ -136,19 +97,20 @@ button a {
 
 /*Start of Empowering teams section*/
 .empower-logos{
-  /*border: solid blue;*/
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  height: 500px;
+  display: flex;
   position: relative;
   top: 50px;
+}
+.empower-container, .company-icons{
+  width: 50%
 }
 .left-side-empower{
   width: 365px;
   position: relative;
-  /*left: 109px;*/
   top: 86px;
-
+  display: flex;
+  flex-wrap: wrap;
 }
 .left-side-empower h1{
   margin: 0;
@@ -156,7 +118,6 @@ button a {
   font-size: 3.75em;
   height: 215px;
   line-height: 64px;
-  
 }
 .left-side-empower h3{
   margin: 0;
@@ -203,27 +164,31 @@ button a {
 }
 /*End Empowering Section*/
 /*Start Company Icons*/
-.company-icons{}
+.company-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .google{
   height: 70px;
   width: 70px;
   border-radius: 50px;
   position: relative;
-  left: 7%;
-  top: 10%;
   box-shadow: 2px 3px 3px grey;
+  right: 50px;
+ bottom: 90px;;
 }
 .google img{
   padding: 18px;
 }
 .asana{
-  height: 80px;
-  width: 80px;
-  border-radius: 50px;
-  position: relative;
-  top: 4px;
-  left: 437px;
-  box-shadow: 2px 3px 3px grey;
+ height: 80px;
+ width: 80px;
+ border-radius: 50px;
+ position: relative;
+ left: 375px;
+ box-shadow: 2px 3px 3px grey;
+ bottom: 60px;
 }
 .asana img{
   padding: 18px;
@@ -232,10 +197,10 @@ button a {
   height: 84px;
   width: 84px;
   position: relative;
-  left: 239px;
-  bottom: 9%;
+  bottom: 13px;
   border-radius: 50px;
   box-shadow: 2px 3px 3px grey;
+  left: 45px;
 }
 .atlassian img{
   padding: 20px;
@@ -244,8 +209,8 @@ button a {
   height: 90px;
   width: 90px;
   position: relative;
-  left: 20px;
-  top: 9px;
+  right: 225px;
+  top: 103px;
   border-radius: 50px;
   box-shadow: 2px 3px 3px grey;
 }
@@ -256,8 +221,7 @@ button a {
   height: 90px;
   width: 90px;
   position: relative;
-  left: 306px;
-  bottom: 76px;
+  top: 100px;
   border-radius: 50px;
   box-shadow: 2px 3px 3px grey;
 }
@@ -268,8 +232,8 @@ button a {
   height: 60px;
   width: 60px;
   position: relative;
-  bottom: 50px;
-  left: 184px;
+  right: 275px;
+  top: 200px;
   border-radius: 50px;
   box-shadow: 2px 3px 3px grey;
 }
@@ -280,10 +244,10 @@ button a {
   height: 70px;
   width: 70px;
   position: relative;
-  left: 445px;
-  bottom: 40px;
+  top: 225px;
   border-radius: 50px;
   box-shadow: 2px 3px 3px grey;
+  right: 25px;
 }
 .google-calendar{
   padding:15px;
@@ -295,12 +259,9 @@ button a {
   flex-direction: column;
   line-height: 10px;
   align-items: center;
-  
-  height: 660px;
-  justify-content: flex-end;
+  height: 850px;
+  padding-top: 250px;
 }
-
-
 .section-two-benefits h2{
   font-weight: 800;
   font-size: 60px;
@@ -317,44 +278,12 @@ button a {
 }
 .beautiful-templates h4{
   width: 615px;
+  color: #848e9a;
 }
 .four-sqre-option{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /*padding-left: 25px;*/
-  position: relative;
-  top: 60px;
-}
-.square-one{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  box-shadow: 0px 1px 6px 2px;
-  height: 256px;
-  width: 281px;
-}
-.square-one .responsive{
-  margin-top: 7px;
-}
-.square-two{
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-.square-two .customizable{
-  margin-top: 5px;
-}
-.square-three{
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-.square-three .premium{
-  margin-top: 5px;                                                                                                                                                  
-}
-.square-four{
-  grid-column-start: 4;
-  grid-column-end: 5;
-}
-.square-four .documetnation{
-  margin-top: 5px;
+  display: flex;
+  padding-top: 40px;
+  flex-shrink: inherit;
 }
 .learn-more-tag{
   padding-top: 17px;
@@ -410,7 +339,6 @@ h5{
 .section-three-software{
   position: relative;
   top: 20px;
-  /*border: solid orange;*/
   display: flex;
   align-self: center;
 }
@@ -418,26 +346,18 @@ h5{
   max-width: 1200px;
   display: flex;
   flex-direction: row;
-  margin-top: 100px;
   background-color: rgb(248, 250, 254);
-  /*width: 1056px;*/
   height: 500px;
 }
 .header-button{
   padding-left: 30px;
   align-self: center;
 }
-.perspect-detail{
-
-}
 .perspect-detail h2{
   width: 428px;
   font-size: 33px;
   font-weight: 700;
   margin-bottom: 27px;
-}
-.section-three-software .playvideo{
-
 }
 .banner-one{
   align-self: flex-end;
@@ -472,7 +392,7 @@ h5{
   
 }
 .why-front h4{
-  color: #acb4bd;
+  color: #848e9a;
   font-weight: 500;
   font-size: 19px;
 }
@@ -494,6 +414,7 @@ h5{
 .circle-horizontal ul{
   display: flex;
   flex-direction: row;
+  /* padding-left: 195px; */
 }
 .horizontal-row .circle{
   display: flex;
@@ -518,12 +439,12 @@ h5{
   flex-direction: row;
   font-weight: 800;
   margin-top: 10px;
+  padding-left: 195px
 }
 .basic-layouts .basic-one{
   position: relative;
   right: 220px;
 }
-
 .basic-layouts .components-two{
   position: relative;
   right: 60px;
@@ -538,11 +459,12 @@ h5{
 }
 .banner-two{
   max-width: 1200px;
-  padding: 90px;
+  padding: 70px;
   display: flex;
   flex-direction: column;
 }
 .play-button{
+  top: 245px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -553,7 +475,6 @@ h5{
   box-shadow: 1px 3px 8px grey;
   align-self: center;
   position: relative;
-  bottom: 270px;
   background-color: white;
 }
 .play-button .fa-play{
@@ -583,13 +504,9 @@ h5{
   height: 0px;
   width: 198px;
 }
-.left-side-dot{
-
-}
 .dots img{
   height: 500px;
 }
-
 .chris-quote{
   grid-column-start: 2;
   grid-column-end: 3;
@@ -609,7 +526,6 @@ h5{
 }
 .hubspot{
   margin-bottom: 38px;
-  
 }
 .testimonial p{
   font-weight: 600;
@@ -645,7 +561,6 @@ h5{
   margin-left: 100px;
 }
 
-
 /*Pricing*/
 .pricing{
   margin-top: 80px;
@@ -666,7 +581,6 @@ h5{
   max-width: 1200px;
   margin-top: 100px;
   display: flex;
-  flex-direction: comlumn;
 }
 .per-month{
   width: 40%;
@@ -740,18 +654,18 @@ h5{
   font-weight: 800;
 }
 .achieve p{
-  color:#8a96a3;
+  color: #848e9a;
 }
 .form{
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   margin-top: 100px;
   text-align: left;
-  background-image: url(https://images.unsplash.com/photo-1588420343618-6141b3784bce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80);
   background-repeat: no-repeat;
+  background-color: #253559;
 }
 .left-side-form{
+  width: 50%;
   padding: 50px;
   color: white;
   align-self: center;
@@ -784,9 +698,6 @@ h5{
   font-weight: 700;
   font-size: 16px;
 }
-.head-commercials{
-
-}
 .humans ul{
   display: flex;
   flex-direction: row;
@@ -809,7 +720,6 @@ h5{
   align-self: center;
   height: 620px;
   justify-content: center;
-
 }
 .form-transaction{
   background-color: #ffffff;
@@ -893,16 +803,14 @@ h5{
 }
 .btm-directory{
   margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
 }
 .company-image-btm{
   height: 40px;
   width: 100px;
 }
 .column-one-logo{
-  grid-column: 1/2;
-  grid-row: 1/2;
+  margin-right: 245px;
 }
 .company-location{
   display: flex;
@@ -928,6 +836,7 @@ h5{
   grid-template-rows: repeat(7, 1fr);
   text-align: left;
   height: 251px;
+  width: 640px;
 }
 .btm-company p{
   font-weight: 900;
@@ -1060,7 +969,6 @@ h5{
 .us-flag{
   border: none;
   background-color: #6a7787;
-  
 }
 .us-flag a{
   color: black;
@@ -1077,489 +985,332 @@ h5{
   margin-top: 38px;
 }
 
-@media (max-width:1199px) and (min-width: 769px) {
-.container-wrapper{
-   max-width: 768px;
+@media (max-width:1199px) and (min-width: 1025px) {
+  .logo-links{
+    width: 1130px
   }
-.main-top-drty{
-  flex-direction: column;
-  }
-.top-nav-list ul{
-  left: 200px;
-  }
-.buy-now button{
-  left: 200px;
-  }
-.main-demo{
-    left: 0px;
-  }
-.demos{
-  margin-left: 0;
-  left: 0;
-  }
-.docs{
-  left: 0;
-  }
-.key-benefits{
-  position: relative;
-  left: 95px;
-  }
-.beautiful-templates{
-  position: relative;
-  left: 95px;
-  }
-.four-sqre-option{
-  left: 80px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  }
-.square-one{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  }
-.square-two{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  }
-.content-three{
-  position: relative;
-  left: 80px;
- }
-.why-header{
-  position: relative;
-  left: 117px;
-}
-.circle-horizontal{
-  position: relative;
-  left: 115px
-}
-.basic-layouts{
-  position: relative;
-  left: 126px;
-}
-.banner-two{
-  position: relative;
-  left: 100px;
-}
-.play-button{
-  bottom: 157px;
-}
-.split-quote{
-  position: relative;
-  left: 155px;
-}
-.trusted-web{
-  position: relative;
-  left: 100px;
-}
-.web-list ul{
-  flex-direction: column;
-  align-items: center;
-}
-.pricing{
-  position: relative;
-  left: 100px;
-}
-.terms{
-  position: relative;
-  left: 107px;
-}
-.rights-reserved{
-  position: relative;
-  left: 107px;
-}
-}
-@media (max-width:768px) and (min-width:481px){
-.container-wrapper{
-  max-width: 480px;
-}
-.main-top-drty{
-  flex-direction: column;
-}
-.top-nav-list ul{
-  left: 200px;
-  font-size: 9px;
-}
-.buy-now button{
-  left: 200px;
-}
-.main-demo{
-  left: 0px;
-}
-
-.demos{
-margin-left: 0;
-left: 0;
-}
-.docs{
-left: 0;
-}
-.empower-logos{
-  grid-template-columns: 0;
-  grid-template-rows: repeat(2, 1fr);
-}
-.company-icons{
-  position: relative;
-  left: 20px;
-
-}
-.section-two-benefits{
-  margin-top: 200px;
-}
-.key-benefits{
-  position: relative;
-  left: 70px;
-  }
-.beautiful-templates{
-  position: relative;
-  left: 100px;
-}
-.four-sqre-option{
-  left: 75px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  }
-.square-one{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  }
-.square-two{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  }
-.content-three{
-  display: grid;
-  position: relative;
-  left: 80px;
-}
-.banner-one{
-  margin-top: 43px;
-  }
-.why-header{
-  position: relative;
-  left: 80px;
-}
-.circle-horizontal ul{
-  width: 577px;
-  position: relative;
-  left: 97px;
-}
-.basic-layouts{
-  width: 1px;
-}
-.basic-layouts .basic-one{
-  right: 193px;
-}
-.basic-layouts .components-two{
-  right: 103px;
-}
-.basic-layouts .combined-three{
-  left:-18px
-}
-.basic-layouts .page-four{
-  left: 80px;
-}
-.banner-two{
-  padding: 0;
-  margin-top: 42px;
-  left: 107px;
-  position: relative;
-  width: 465px;
-}
-.play-button{
-  bottom: 138px;
-}
-.split-quote{
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: 0;
-  left: 88px;
-  position: relative;
-}
-.left-side{
-  grid-row: 1/2;
-}
-.chris-quote{
-  grid-row: 2/3;
-}
-.trusted-web{
-  margin-top: 5px;
-}
-.trusted-web .best{
-  position: relative;
-  left: 121px;
-  font-size: 26px;
-}
-.web-list ul{
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  left: 113px;
-}
-.pricing{
-  position: relative;
-  left: 117px;
-  }
-.monthly{
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-}
-.per-month{
-  width: 100%;
-  position: relative;
-
-}
-.grid-options{
-  margin-top: 20px;
-  padding: 0;
-}
-.form{
-  grid-template-rows: repeat(2, 1fr);
-}
-.right-side-form{
-  grid-row: 2/3;
-  position: relative;
-  left: 3px;
-}
-.btm-directory{
-  margin-top: 12px;
-  grid-template-rows: repeat(2, 1fr);
-}
-.column-one-logo{
-grid-column:1/5;
-}
-.company-image-btm{
-  width: 236px;
-}
-.btm-grid{
-  grid-row: 2/3;
-  grid-column: 1/5;
-}
-.company-location{
-  margin-top: 50px;
-}
-.company-location, .company-phone{
-  font-size: 25px;
-  position: relative;
-  top: 19px;
-  
-}
-.btm-grid{
-  height: 300px;
-  font-size: 12px;
-}
-.btm-careers{
-  display: flex;
-  flex-direction: column;
-}
-.social-links{
-  gap: 12px;
-}
-.terms{
-  position: relative;
-  left: 107px;
-  font-size: 8px;
-}
-.rights-reserved{
-  position: relative;
-  left: 107px;
-}
-}
-@media (max-width:480px) and (min-width:320px){
-  .container-wrapper{
-    max-width: 320px;
-  }
-  .main-top-drty{
-    flex-direction: column;
-  }
-  .top-nav-list ul{
-    left: 200px;
-    font-size: 9px;
-  }
-  .buy-now button{
-    left: 200px;
-  }
-  .main-demo{
-    left: 0px;
-  }
-  
-  .demos{
-  margin-left: 0;
-  left: 0;
-  }
-  .docs{
-  left: 0;
+  .company-image{
+    left: 101px;
   }
   .empower-logos{
-    grid-template-columns: 0;
-    grid-template-rows: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: center;
   }
   .company-icons{
-    position: relative;
-    left: 20px;
-  
+    padding-top: 150px;
+  }
+  .google, .asana, .atlassian, .paypal, .weave, .google-ads, .google-calendar{
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+  }
+  .google, .google-calendar{
+    height: 60px;
+    width: 60px;
+  }
+  .asana, .google-ads{
+    height: 70px;
+    width: 70px;
+  }
+  .atlassian, .weave{
+    height: 80px;
+    width: 80px;
+  }
+  .web-list ul li{
+    width: 80px;
+  }
+  .monthly{
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-options{
+    margin-top: 40px;
+  }
+  .form{
+    flex-direction: column;
+  }
+  .btm-directory{
+    flex-direction: column;
+    align-items: center
+  }
+  .btm-grid{
+    margin-top: 45px
+  }
+  .privacy{
+    width: 1060px;
+  }
+  .policy{
+    padding-left: 170px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px){
+  .logo-links{
+    width: 995px;
+  }
+  .company-image{
+    left: 230px;
+  }
+  .empower-logos{
+    flex-direction: column;
+    align-items: center;
+  }
+  .company-icons{
+    padding-top: 150px;
+  }
+  .google, .asana, .atlassian, .paypal, .weave, .google-ads, .google-calendar{
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+  }
+  .google, .google-calendar{
+    height: 60px;
+    width: 60px;
+  }
+  .asana, .google-ads{
+    height: 70px;
+    width: 70px;
+  }
+  .atlassian, .weave{
+    height: 80px;
+    width: 80px;
   }
   .section-two-benefits{
-    margin-top: 200px;
-  }
-  .key-benefits{
-    position: relative;
-    left: 70px;
-    }
-  .beautiful-templates{
-    position: relative;
-    left: 100px;
+    height: 980px;
   }
   .four-sqre-option{
-    left: 75px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    }
+  }
   .square-one{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    }
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
   .square-two{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    }
+    grid-column-end: 2;
+    grid-column-end: 3;
+  }
   .content-three{
-    display: grid;
-    position: relative;
-    left: 80px;
+    flex-direction: column;
+    height: 595px;
+  }
+  .header-button{
+    padding-left: 0px;
   }
   .banner-one{
-    margin-top: 43px;
-    }
-  .why-header{
-    position: relative;
-    left: 80px;
+    margin-top: 50px;
   }
-  .circle-horizontal ul{
-    width: 577px;
-    position: relative;
-    left: 97px;
+  .circle-horizontal ul .horizontal-row{
+    width: 0;
+    top: 0;
+    margin-right: 0;
+  }
+  .circle-horizontal ul {
+    flex-direction: column;
   }
   .basic-layouts{
-    width: 1px;
+    flex-direction: column;
   }
-  .basic-layouts .basic-one{
-    right: 193px;
+  .basic-layouts .basic-one, .basic-layouts .components-two{
+    right: 0;
   }
-  .basic-layouts .components-two{
-    right: 103px;
+  .basic-layouts .combined-three, .basic-layouts .page-four{
+    left: 0;
   }
-  .basic-layouts .combined-three{
-    left:-18px
+  .circle-list-container{
+    display: flex;
   }
-  .basic-layouts .page-four{
-    left: 80px;
+  .basic-one{
+    padding-top: 4px;
   }
-  .banner-two{
-    padding: 0;
-    margin-top: 42px;
-    left: 107px;
-    position: relative;
-    width: 465px;
+  .components-two{
+    padding-top: 45px;
   }
-  .play-button{
-    bottom: 138px;
+  .combined-three{
+    padding-top: 39px;
+  }
+  .page-four{
+    padding-top: 40px;
+  }
+  .basic-layouts{
+    padding-left: 0px;
   }
   .split-quote{
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 0;
-    left: 88px;
-    position: relative;
-  }
-  .left-side{
-    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
   }
   .chris-quote{
-    grid-row: 2/3;
-  }
-  .trusted-web{
-    margin-top: 5px;
-  }
-  .trusted-web .best{
-    position: relative;
-    left: 121px;
-    font-size: 26px;
+    margin-top: 105px;
   }
   .web-list ul{
     flex-direction: column;
     align-items: center;
-    position: relative;
-    left: 113px;
   }
-  .pricing{
-    position: relative;
-    left: 117px;
-    }
+  .web-list ul li{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
   .monthly{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-  }
-  .per-month{
-    width: 100%;
-    position: relative;
-  
+    flex-direction: column;
+    align-items: center;
   }
   .grid-options{
-    margin-top: 20px;
-    padding: 0;
+    margin-top: 40px;
   }
   .form{
-    grid-template-rows: repeat(2, 1fr);
-  }
-  .right-side-form{
-    grid-row: 2/3;
-    position: relative;
-    left: 3px;
+    flex-direction: column;
   }
   .btm-directory{
-    margin-top: 12px;
-    grid-template-rows: repeat(2, 1fr);
-  }
-  .column-one-logo{
-  grid-column:1/5;
-  }
-  .company-image-btm{
-    width: 236px;
+    flex-direction: column;
+    align-items: center
   }
   .btm-grid{
-    grid-row: 2/3;
-    grid-column: 1/5;
+    margin-top: 45px
   }
-  .company-location{
+  .privacy{
+    width: 1060px;
+  }
+  .policy{
+    padding-left: 170px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 600px){
+  .logo-links{
+    flex-direction: column;
+  }
+  .company-image{
+    top: 20px;
+  }
+  .empower-logos{
+    flex-direction: column;
+    align-items: center;
+  }
+  .company-icons{
+    padding-top: 150px;
+  }
+  .google, .asana, .atlassian, .paypal, .weave, .google-ads, .google-calendar{
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+  }
+  .google, .google-calendar{
+    height: 60px;
+    width: 60px;
+  }
+  .asana, .google-ads{
+    height: 70px;
+    width: 70px;
+  }
+  .atlassian, .weave{
+    height: 80px;
+    width: 80px;
+  }
+  .beautiful-templates{
+    line-height: 38px;
+  }
+  .beautiful-templates h4{
+    width: 355px;
+  }
+  .four-sqre-option{
+    display: grid;
+  }
+  .square-one{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .square-two{
+    grid-column-end: 2;
+    grid-column-end: 3;
+  }
+  .content-three{
+    flex-direction: column;
+    height: 595px;
+    margin-top: 180px;
+  }
+  .header-button{
+    padding-left: 0px;
+  }
+  .banner-one{
     margin-top: 50px;
   }
-  .company-location, .company-phone{
-    font-size: 25px;
-    position: relative;
-    top: 19px;
-    
+  .why-header h4{
+    width: 476px;
   }
-  .btm-grid{
-    height: 300px;
-    font-size: 12px;
+  .circle-horizontal ul .horizontal-row{
+    width: 0;
+    top: 0;
+    margin-right: 0;
   }
-  .btm-careers{
+  .circle-horizontal ul {
+    flex-direction: column;
+  }
+  .basic-layouts{
+    flex-direction: column;
+  }
+  .basic-layouts .basic-one, .basic-layouts .components-two{
+    right: 0;
+  }
+  .basic-layouts .combined-three, .basic-layouts .page-four{
+    left: 0;
+  }
+  .circle-list-container{
+    display: flex;
+  }
+  .basic-one{
+    padding-top: 4px;
+  }
+  .components-two{
+    padding-top: 45px;
+  }
+  .combined-three{
+    padding-top: 39px;
+  }
+  .page-four{
+    padding-top: 40px;
+  }
+  .basic-layouts{
+    padding-left: 0px;
+  }
+  .split-quote{
     display: flex;
     flex-direction: column;
   }
-  .social-links{
-    gap: 12px;
+  .chris-quote{
+    margin-top: 105px;
   }
-  .terms{
-    position: relative;
-    left: 107px;
-    font-size: 8px;
+  .web-list ul{
+    flex-direction: column;
+    align-items: center;
   }
-  .rights-reserved{
-    position: relative;
-    left: 107px;
+  .web-list ul li{
+    margin-right: 0px;
+    margin-left: 0px;
   }
-
+  .monthly{
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-options{
+    margin-top: 40px;
+  }
+  .form{
+    flex-direction: column;
+  }
+  .btm-directory{
+    flex-direction: column;
+    align-items: center
+  }
+  .btm-grid{
+    margin-top: 45px;
+    width: 567px;
+  }
+  .privacy{
+    width: 1060px;
+  }
+  .policy{
+    padding-left: 170px;
+  }
 }
